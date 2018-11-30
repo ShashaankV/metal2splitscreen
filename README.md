@@ -1,4 +1,6 @@
-#Split view for iOS using Metal 2 (and Swift)
+# Split view for iOS using Metal 2 (and Swift)
+[repo in process, cleaning up and posting code soon]
+
 Basic Swift app using Metal 2 for producing an iOS split screen. Metal is Apple's replacement for OpenGL. This code produces two viewports for rendering two halves of the screen.
 <br>
 ## Why post the repo?
