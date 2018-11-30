@@ -9,5 +9,5 @@ Why two viewports rather than split the screen into two rects, etc.? Viewport ma
 
 ## iOS projects
 <i>Metal 2 does not work on simulator. To test results, you need to test on a phone (known universal xcode-metal issue).</i>
-* metal2swift1 - basic code, example image: flipped triangles (fill respective half-screens)
+* metal2swift1 - basic code, example image (simple geometric shapes): flipped triangles (fill respective half-screens)
 * metal2swift2 [in process] - 1+ generic image on quad
