@@ -4,7 +4,7 @@
 //
 //  Created by svattiku on 11/30/18.
 //  Copyright © 2018 svattiku. All rights reserved.
-//
+//  formatted for landscape L only
 
 import UIKit
 import Metal
