@@ -8,5 +8,5 @@ For my purposes this will be used as the base code for an iphone VR app. I made 
 Why two viewports rather than split the screen into two rects, etc.? Viewport makes it easy to use Metal/OpenGL (graphics card) built-in 3D transformation such as different camera positions.
 
 ## iOS projects
-
+~~~
 ** metal2swift1 - basic code, example image flipped triangles (fill the half-screens)
