@@ -1,7 +1,7 @@
-# Split view for iOS using Metal 2 (and Swift)
+# Split screen for iOS using Metal 2 (and Swift)
 [repo in process, cleaning up and posting code soon]
 
-Basic Swift app using Metal 2 for producing an iOS split screen. Metal is Apple's replacement for OpenGL. This code produces two viewports for rendering two halves of the screen.
+Basic Swift app using Metal 2 for producing an iOS split screen by using <b>two viewports</b>. Metal is Apple's replacement for OpenGL. This code produces two viewports for rendering two halves of the screen.
 <br>
 ## Why post the repo?
 For my purposes this will be used as the base code for an iphone VR app. I made the repo since I don't think there are examples for doing this in Swift. Also, the last Apple conference focused only on the case where the final display is a specialized VR device such as Vive, etc. <br>
