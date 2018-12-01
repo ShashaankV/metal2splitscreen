@@ -12,6 +12,8 @@
 		3A73A06621B1D28600E88F8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A73A06421B1D28600E88F8A /* Main.storyboard */; };
 		3A73A06821B1D28600E88F8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A73A06721B1D28600E88F8A /* Assets.xcassets */; };
 		3A73A06B21B1D28600E88F8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A73A06921B1D28600E88F8A /* LaunchScreen.storyboard */; };
+		3AA2BDC021B2132D00711F46 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA2BDBF21B2132D00711F46 /* Vertex.swift */; };
+		3AA2BDC221B214B400711F46 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA2BDC121B214B400711F46 /* Node.swift */; };
 		3AC43B2221B1D343009A154E /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3AC43B2121B1D343009A154E /* Shaders.metal */; };
 		3AC43B2621B1E47E009A154E /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC43B2521B1E47E009A154E /* Quad.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +26,8 @@
 		3A73A06721B1D28600E88F8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A73A06A21B1D28600E88F8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A73A06C21B1D28600E88F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AA2BDBF21B2132D00711F46 /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		3AA2BDC121B214B400711F46 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		3AC43B2121B1D343009A154E /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		3AC43B2521B1E47E009A154E /* Quad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +65,8 @@
 				3A73A06021B1D28600E88F8A /* AppDelegate.swift */,
 				3A73A06221B1D28600E88F8A /* ViewController.swift */,
 				3AC43B2521B1E47E009A154E /* Quad.swift */,
+				3AA2BDC121B214B400711F46 /* Node.swift */,
+				3AA2BDBF21B2132D00711F46 /* Vertex.swift */,
 				3AC43B2121B1D343009A154E /* Shaders.metal */,
 				3A73A06421B1D28600E88F8A /* Main.storyboard */,
 				3A73A06721B1D28600E88F8A /* Assets.xcassets */,
@@ -144,6 +150,8 @@
 				3AC43B2621B1E47E009A154E /* Quad.swift in Sources */,
 				3AC43B2221B1D343009A154E /* Shaders.metal in Sources */,
 				3A73A06321B1D28600E88F8A /* ViewController.swift in Sources */,
+				3AA2BDC221B214B400711F46 /* Node.swift in Sources */,
+				3AA2BDC021B2132D00711F46 /* Vertex.swift in Sources */,
 				3A73A06121B1D28600E88F8A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
