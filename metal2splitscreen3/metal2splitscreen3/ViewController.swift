@@ -77,8 +77,8 @@ class ViewController: UIViewController {
         
         let textureLoader = MTKTextureLoader(device: device)
         let options: [MTKTextureLoader.Option : Any] = [.generateMipmaps : true, .SRGB : true]
-        texture1 = try? textureLoader.newTexture(name: "nibbler", scaleFactor: 1.0, bundle: nil, options: options)
-        texture2 = try? textureLoader.newTexture(name: "gir", scaleFactor: 1.0, bundle: nil, options: options)
+        texture1 = try? textureLoader.newTexture(name: "g45", scaleFactor: 1.0, bundle: nil, options: options)
+        texture2 = try? textureLoader.newTexture(name: "g135", scaleFactor: 1.0, bundle: nil, options: options)
         self.render()
     }
     
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
         let renderPassDescriptor = MTLRenderPassDescriptor()
         renderPassDescriptor.colorAttachments[0].texture = drawable.texture
         renderPassDescriptor.colorAttachments[0].loadAction = .clear
-        renderPassDescriptor.colorAttachments[0].clearColor = MTLClearColor(red: 0.0, green: 104.0/255.0, blue: 5.0/255.0, alpha: 1.0)
+        renderPassDescriptor.colorAttachments[0].clearColor = MTLClearColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
         
         let commandBuffer = commandQueue.makeCommandBuffer()
         let renderEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: renderPassDescriptor)
@@ -99,11 +99,12 @@ class ViewController: UIViewController {
         let w:Float = Float(screenSize.width)
         let h:Float = Float(screenSize.height)
         
-        print(w)
-        print(h)
-        
-        let viewL = MTLViewport(originX: Double(0*w/2), originY: 0, width: Double(w/2), height: Double(h), znear: 0.1, zfar:100)
-        let viewR = MTLViewport(originX: Double(w/2), originY: 0, width: Double(w/2), height: Double(h), znear: 0.1, zfar:100)
+//        print(w)
+//        print(h)
+        let w2=w/2
+        let hw=w2/h
+        let viewL = MTLViewport(originX: Double(0*w/2), originY: 0, width: Double(w/2), height: Double(hw*h), znear: 0.1, zfar:100)
+        let viewR = MTLViewport(originX: Double(w/2), originY: 0, width: Double(w/2), height: Double(hw*h), znear: 0.1, zfar:100)
         
         // draw left image
         

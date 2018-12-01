@@ -14,7 +14,7 @@ class Quad: Node {
     
     init(device: MTLDevice){
         
-        let Lhalf:Float = 1.0/2
+        let Lhalf:Float = 1.0/10
         let A = Vertex(x: -Lhalf, y:   Lhalf, z:   0.0, r:  1.0, g:  0.0, b:  0.0, a:  1.0, s: 0.0, t: 0)
         let B = Vertex(x: -Lhalf, y:  -Lhalf, z:   0.0, r:  0.0, g:  1.0, b:  0.0, a:  1.0, s: 0.0, t: 1.0)
         let C = Vertex(x:  Lhalf, y:  -Lhalf, z:   0.0, r:  0.0, g:  0.0, b:  1.0, a:  1.0, s: 1.0, t: 1.0)
