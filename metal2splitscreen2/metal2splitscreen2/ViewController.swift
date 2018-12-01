@@ -11,25 +11,15 @@ import UIKit
 import Metal
 
 class ViewController: UIViewController {
-    //Define some test data, two different images for each view
-    //up triangle
-    let vertexData1:[Float] = [
-        0.0, 1.0, 0.0,
-        -1.0, -1.0, 0.0,
-        1.0, -1.0, 0.0]
-    //down triangle
-    let vertexData2:[Float] = [
-        0.0, -1.0, 0.0,
-        -1.0, 1.0, 0.0,
-        1.0, 1.0, 0.0]
+
     //Declare necessary variables
     var device: MTLDevice!
     var metalLayer: CAMetalLayer!
-    //two data buffers for two viewports, otherwise overwrite during rendering
-    var vertexBuffer1: MTLBuffer!
-    var vertexBuffer2: MTLBuffer!
     var pipelineState: MTLRenderPipelineState!
     var commandQueue: MTLCommandQueue!
+    var q1 : Quad!
+    var tri_up : Triangle_up!
+    var tri_down : Triangle_down!
     
     
     override func viewDidLoad() {
@@ -46,13 +36,10 @@ class ViewController: UIViewController {
         metalLayer.frame = view.layer.frame  // 5
         view.layer.addSublayer(metalLayer)   // 6
         
-        //make Metal format data (buffers)
-        let dataSize1 = vertexData1.count * MemoryLayout.size(ofValue: vertexData1[0]) // 1
-        vertexBuffer1 = device.makeBuffer(bytes: vertexData1, length: dataSize1, options: []) // 2
-        
-        let dataSize2 = vertexData2.count * MemoryLayout.size(ofValue: vertexData2[0]) // 1
-        vertexBuffer2 = device.makeBuffer(bytes: vertexData2, length: dataSize2, options: []) // 2
-        
+        tri_up = Triangle_up(device: device)
+        tri_down = Triangle_down(device: device)
+        q1 = Quad(device: device)
+
         // 1, setup shaders (defined in Shaders.metal, Swift does not need a path for functions in other files)
         let defaultLibrary = device.makeDefaultLibrary()!
         let fragmentProgram = defaultLibrary.makeFunction(name: "basic_fragment")
@@ -93,15 +80,15 @@ class ViewController: UIViewController {
         //    let t0 = NSDate()
         renderEncoder?.setViewport(viewL)
         renderEncoder?.setRenderPipelineState(pipelineState)
-        renderEncoder?.setVertexBuffer(vertexBuffer1, offset: 0, index: 0)
-        renderEncoder?.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3, instanceCount: 1)
+        renderEncoder?.setVertexBuffer(q1.vertexBuffer, offset: 0, index: 0)
+        renderEncoder?.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 6, instanceCount: 1)
         //    let t1 = t0.timeIntervalSinceNow
         
         
         
         renderEncoder?.setViewport(viewR)
         renderEncoder?.setRenderPipelineState(pipelineState)
-        renderEncoder?.setVertexBuffer(vertexBuffer2, offset: 0, index: 0)
+        renderEncoder?.setVertexBuffer(tri_down.vertexBuffer, offset: 0, index: 0)
         renderEncoder?.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3, instanceCount: 1)
         
         
