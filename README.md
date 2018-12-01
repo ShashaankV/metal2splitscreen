@@ -9,7 +9,7 @@ Base code for an iphone VR (stereopsis) app. Not enough examples for splitscreen
 Why two viewports rather than split the screen into two rects, etc.? Viewport makes it easy to use Metal/OpenGL (graphics card) built-in 3D transformation such as different camera positions (needed for stereopsis).
 
 ## iOS projects (Xcode 9.4)
-<i>Metal does not work on simulator (by design). To test results, you need to test on a phone. Projects listed in order of developmental stage.</i>
+<i>Metal does not work on simulator (by design). To test results, you need to test on a phone. Projects listed in order of development stage.</i>
 * metal2swift1 - basic code (single main script), example image (simple geometric shapes): flipped triangles (fill respective half-screens)
 * metal2swift2 - refactor:
   * geometric object class (file), quad, triangles (up and down)
