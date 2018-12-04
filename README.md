@@ -19,3 +19,4 @@ Why two viewports rather than split the screen into two rects, etc.? Viewport ma
   * refactor:
     * shader - parses object position, color, and texture coordinates
   * add color and texture fragment shaders
+* metal2swift4 - different image and contrast per port
